@@ -25,29 +25,15 @@ return require('packer').startup(function(use)
       end
   })
 
-  -- treesitter
-  use {
-    'nvim-treesitter/nvim-treesitter', run = function()
-    local TSUpdate = require('nvim-treesitter.install').update({ with_sync = true })
-    TSUpdate()
-  end
-  }
-
-  use('nvim-treesitter/playground')
-
-  -- tokyonight colour scheme  
-
+  -- color scheme
+  
   use({
-    'folke/tokyonight.nvim',
-    as = 'tokyonight',
-    config = function()
-      vim.cmd('colorscheme tokyonight-storm')
-    end
+    "folke/tokyonight.nvim",
+    as = "tokyonight"
   })
-
-
 
   -- copilot (microsoft branded rat)
   use("github/copilot.vim")
 
 end)
+
