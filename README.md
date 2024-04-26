@@ -6,5 +6,9 @@ This repo would be regularly updated as my config is still not mature enough to 
 
 ## Setup
 I'll not include compiled plugin folder, so just do
-```:PackerSync```
+```
+make install
+and
+:PackerSync
+```
 before using.
