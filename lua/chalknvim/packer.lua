@@ -69,6 +69,8 @@ return require('packer').startup(function(use)
   }
 
   use('andweeb/presence.nvim')
+  use('meatballs/notebook.nvim')
+
 
 end)
 

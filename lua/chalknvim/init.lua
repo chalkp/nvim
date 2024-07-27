@@ -1,11 +1,31 @@
 require("chalknvim.set")
 require("chalknvim.remap")
 
-print(" _____                                                   _     _       ")
-print("|  __ \\                                                 (_)   | |      ")
-print("| |  | | ___     __ _ ___   _   _  ___  _   _  __      ___ ___| |__    ")
-print("| |  | |/ _ \\   / _` / __| | | | |/ _ \\| | | | \\ \\ /\\ / / / __| '_ \\   ")
-print("| |__| | (_) | | (_| \\__ \\ | |_| | (_) | |_| |  \\ V  V /| \\__ \\ | | |_ ")
-print("|_____/ \\___/   \\__,_|___/  \\__, |\\___/ \\__,_|   \\_/\\_/ |_|___/_| |_(_)")
-print("                             __/ |                                     ")
-print("                            |___/                                      ")
+require("presence").setup({
+  -- General options
+  auto_update         = true,
+  neovim_image_text   = "Do not underestimate the power of collective autism.",
+  main_image          = "neovim",
+  log_level           = nil,
+  debounce_timeout    = 10,
+  enable_line_number  = true,
+  blacklist           = {},
+  buttons             = {{ label = "chalkp.com", url = "https://chalkp.com/" }, ...},
+  file_assets         = {},
+  show_time           = true,
+
+  -- Rich Presence text options
+  editing_text        = "Editing %s",
+  file_explorer_text  = "Browsing %s",
+  git_commit_text     = "Committing changes",
+  plugin_manager_text = "Managing plugins",
+  reading_text        = "Reading %s",
+  workspace_text      = "Working on %s",
+  line_number_text    = "Line %s out of %s",
+})
+
+require("notebook").setup {
+  insert_blank_line = true,
+  show_index = true,
+  show_cell_type = true,
+}
